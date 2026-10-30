@@ -18,16 +18,16 @@
         <div class="curved-shape2"></div>
         <div class="form-box Login">
             <h2 class="animaion" style="--D:0; --S:21">Login</h2>
-            <form method="POST">
+            <form method="POST" action="{{ url_for('auth.login') }}">
                 <div class="input-box animaion" style="--D:1; --S:22">  
                     <input type="text" id="username" name="username" required>
-                    <label for="">Username</label>
+                    <label for="username">Username or Email</label>
                     <i class='bx  bx-user'  ></i> 
                 </div>
 
                 <div class="input-box animaion" style="--D:2; --S:23">
                     <input type="password" id="password" name="password"  required>
-                    <label for="">Password</label>
+                    <label for="password">Password</label>
                     <i class='bx  bx-lock'  ></i> 
                 </div>
 
@@ -49,23 +49,23 @@
           <!-- THIS IS THE REGISTER PAGE -->
 
         <div class="form-box Register">
-            <h2 class="animaion" style="--li:17; --S:0;">Register</h2>
-            <form action="#">
+            <h2 class="animaion" style="--li:17; --S:0;">SIGN UP</h2>
+            <form method="POST" action="{{ url_for('auth.register_user') }}">
                 <div class="input-box animaion" style="--li:18; --S:1;">
-                    <input type="text" id="usernameR" name="passwordR" required>
-                    <label for="">Username</label>
+                    <input type="text" id="usernameR" name="username" required>
+                    <label for="usernameR">Username</label>
                     <i class='bx  bx-user'  ></i> 
                 </div>
 
                   <div class="input-box animaion" style="--li:19; --S:2;">  
                     <input type="email" id="mail" name="mail" required>
-                    <label for="">Email</label>
+                    <label for="mail">Email</label>
                     <i class='bx  bx-envelope'  ></i> 
                 </div>
 
                 <div class="input-box animaion" style="--li:20; --S:3;">
                     <input type="password" id="passwordR" name="passwordR" required>
-                    <label for="">Password</label>
+                    <label for="passwordR">Password</label>
                     <i class='bx  bx-lock'  ></i> 
                 </div>
 
@@ -92,4 +92,3 @@
 </html>
 
 {% endblock%}
-
